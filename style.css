@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;700&display=swap");
+
+:root {
+	--cyan: hsl(179, 62%, 43%);
+	--bright-yellow: hsl(71, 73%, 54%);
+	--light-gray: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	font-family: "Karla", sans-serif;
+	font-weight: 400;
+	background-color: var(--light-gray);
+}
+
+.container {
+	font-size: 1.6rem;
+	max-width: 35rem;
+	margin: 3rem;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+.card {
+	padding: 2.5rem;
+}
+
+.card--1 {
+	background-color: white;
+}
+.card--1 .header {
+	font-size: 2.1rem;
+	color: var(--cyan);
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+.card--1 .header--2 {
+	color: var(--bright-yellow);
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+.card--1 .desc {
+	color: var(--grayish-blue);
+	/* font-weight: 700; */
+	line-height: 1.5;
+}
+
+.card--2 {
+	background-color: var(--cyan);
+}
+.card--2 .header {
+	color: white;
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+}
+.card--2 .header--2 {
+	display: flex;
+	margin-bottom: 1rem;
+	align-items: center;
+}
+.card--2 span {
+	color: rgba(255, 255, 255, 0.3);
+	font-weight: 700;
+}
+.card--2 .val {
+	font-size: 3rem;
+	color: white;
+	margin-right: 1rem;
+}
+.card--2 .desc {
+	color: var(--light-gray);
+	margin-bottom: 2.5rem;
+	font-weight: 700;
+}
+.card--2 button {
+	width: 100%;
+	padding: 1.5rem;
+	background-color: var(--bright-yellow);
+	border: none;
+	border-radius: 0.5rem;
+	color: white;
+	font-weight: 700;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.card--3 {
+	background-color: hsla(179, 62%, 43%, 0.7);
+	color: rgba(255, 255, 255, 0.65);
+	line-height: 1.5;
+}
+.card--3 .header {
+	font-size: 1.9rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: white;
+}
+.card--3 li {
+	list-style: none;
+}
+/* attribution */
+.attribution {
+	font-size: 1.1rem;
+	text-align: center;
+	margin: 3rem;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 65rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.card {
+		padding: 3rem;
+	}
+
+	.card--1 {
+		grid-column: 1/3;
+	}
+}
